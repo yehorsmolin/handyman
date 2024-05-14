@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7c4ae005-f306-4011-aa45-a473f0ac9a9a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Handyman.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Handyman/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Handyman/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Handyman/permissions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Handyman/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Handyman/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Handyman/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forms/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/models/category.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/models/color.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/models/driver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/models/grade.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/models/invoice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/models/order.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/models/product.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/models/status.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/models/storage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/models/supplier.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/models/vendor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/models/vendor_staff.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/serializers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/serializers/category.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/serializers/color.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/serializers/driver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/serializers/grade.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/serializers/invoice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/serializers/order.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/serializers/product.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/serializers/status.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/serializers/storage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/serializers/supplier.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/serializers/vendor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/serializers/vendor_staff.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/signals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/viewsets/driver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/viewsets/invoice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/viewsets/order.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/viewsets/product.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/viewsets/vendor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/logout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2gSIR1D9eo355FgkWw2xuFhC4n3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR_AND_PREVIEW&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="Handyman" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Handyman" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-50da183f06c8-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13135.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7c4ae005-f306-4011-aa45-a473f0ac9a9a" name="Changes" comment="" />
+      <created>1715684539702</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715684539702</updated>
+      <workItem from="1715684566717" duration="20921000" />
+      <workItem from="1715714507898" duration="999000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

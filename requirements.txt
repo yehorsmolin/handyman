@@ -1,0 +1,7 @@
+Django==5.0.4
+psycopg2==2.9.9
+django-phonenumber-field==7.3.0
+phonenumbers==8.13.35
+djangorestframework==3.15.1
+requests==2.31.0
+django-debug-toolbar==4.3.0
