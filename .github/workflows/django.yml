@@ -37,4 +37,3 @@ jobs:
     - name: Checking code coverage
       run: |
         coverage report
-        
