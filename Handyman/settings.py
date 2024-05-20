@@ -106,8 +106,8 @@ DATABASES = {
         'NAME': 'handyman',
         'USER': 'postgres',
         'PASSWORD': 'viA19Toz',
-        # 'HOST': 'localhost',
-        'HOST': 'host.docker.internal',
+        'HOST': 'localhost',
+        # 'HOST': 'host.docker.internal',
     }
 }
 
