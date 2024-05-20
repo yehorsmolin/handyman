@@ -10,14 +10,14 @@ class VendorViewSet(viewsets.ModelViewSet):
     serializer_class = VendorSerializer
     permission_classes = [permissions.IsAuthenticated]
 
-    def get_permissions(self):
-        if self.action == 'create':
-            return [IsAdminUser()]
-        elif self.action in ['update', 'destroy']:
-            return [IsAdminUser(), IsVendor()]
-        elif self.action in ['list', 'retrieve', 'get']:
-            return [IsAdminUser(), IsVendorOrVendorStaff]
-        return super().get_permissions()
+    # def get_permissions(self):
+    #     if self.action == 'create':
+    #         return [IsAdminUser()]
+    #     elif self.action in ['update', 'destroy']:
+    #         return [IsAdminUser(), IsVendor()]
+    #     elif self.action in ['list', 'retrieve', 'get']:
+    #         return [IsAdminUser(), IsVendorOrVendorStaff]
+    #     return super().get_permissions()
 
     def list(self, request, *args, **kwargs):
         user = request.user

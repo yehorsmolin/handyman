@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 
+from celery.schedules import crontab
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +27,10 @@ SECRET_KEY = 'django-insecure-1^t1gtwhx52c!!l#5+8d%bjz6t^@04e@tf=x@7eixw5fpti8h_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "b129-89-36-113-226.ngrok-free.app",
+    "127.0.0.1"
+]
 
 
 # Application definition
@@ -39,11 +44,19 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # External apps
+    # External apps
     'phonenumber_field',
     'phonenumbers',
     'rest_framework',
     'debug_toolbar',
     'rest_framework.authtoken',
+    'django_celery_beat',
+    'drf_yasg',
+    'graphene_django',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
     # Local apps
     'inventory',
 ]
@@ -57,6 +70,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+    "allauth.account.middleware.AccountMiddleware",
 ]
 
 ROOT_URLCONF = 'Handyman.urls'
@@ -64,8 +80,7 @@ ROOT_URLCONF = 'Handyman.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,6 +88,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.request',
             ],
         },
     },
@@ -90,7 +106,8 @@ DATABASES = {
         'NAME': 'handyman',
         'USER': 'postgres',
         'PASSWORD': 'viA19Toz',
-        'HOST': 'localhost',
+        # 'HOST': 'localhost',
+        'HOST': 'host.docker.internal',
     }
 }
 
@@ -170,8 +187,51 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication',
-        # 'hillelDjango3.authentication.HalsoAuthentication',
     ],
-    # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    # 'PAGE_SIZE': 10
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 10
 }
+
+#   Celery settings
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
+
+# CELERY_BEAT_SCHEDULE = {
+#     'orders_created_today': {
+#         'task': 'products.tasks.orders_created_today'
+#         'schedule': crontab(minute='120')
+#     }
+# }
+
+GRAPHENE = {
+    "SCHEMA": "Handyman.schema.schema"
+}
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by email
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+            'https://www.googleapis.com/auth/spreadsheets',
+            'https://www.googleapis.com/auth/drive',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'offline',
+        }
+    },
+}
+
+# Django-allauth
+SITE_ID = 2
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
+SOCIALACCOUNT_STORE_TOKENS = True

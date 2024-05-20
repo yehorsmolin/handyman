@@ -1,36 +1,30 @@
 import django_filters
 from rest_framework import viewsets
 from rest_framework.response import Response
-from inventory.models.product import Product
 from inventory.models.vendor import Vendor
+from inventory.models.delivery import Delivery
 from inventory.models.vendor_staff import VendorStaff
-from inventory.serializers import ProductSerializer, ProductReadOnlySerializer
-from inventory.filters import ProductFilter
-
-from rest_framework.pagination import PageNumberPagination
+from inventory.serializers.delivery import DeliverySerializer
+from inventory.filters import DeliveryFilter
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
 from django.http import HttpResponseRedirect
+from rest_framework.pagination import PageNumberPagination
 
 
-class ProductPagination(PageNumberPagination):
+class DeliveryPagination(PageNumberPagination):
     page_size = 10
     page_size_query_param = 'page_size'
     max_page_size = 100
 
 
-class ProductViewSet(LoginRequiredMixin, viewsets.ModelViewSet):
-    queryset = Product.objects.all()
-    serializer_class = ProductSerializer
+class DeliveryViewSet(LoginRequiredMixin, viewsets.ModelViewSet):
+    queryset = Delivery.objects.all()
+    serializer_class = DeliverySerializer
     filter_backends = [django_filters.rest_framework.DjangoFilterBackend]  # Add this line
-    filterset_class = ProductFilter
-    pagination_class = ProductPagination
-
-    def get_serializer_class(self):
-        if self.action in ['list', 'retrieve']:
-            return ProductReadOnlySerializer
-        return ProductSerializer
+    filterset_class = DeliveryFilter
+    pagination_class = DeliveryPagination
 
     def get_login_url(self):
         # Store the current URL in the session before redirecting to the login page
@@ -61,7 +55,7 @@ class ProductViewSet(LoginRequiredMixin, viewsets.ModelViewSet):
         else:
             return Response({'detail': 'Authentication credentials were not provided.'}, status=401)
 
-        serializer = ProductReadOnlySerializer(queryset, many=True)
+        serializer = DeliverySerializer(queryset, many=True)
         return Response(serializer.data)
 
     def retrieve(self, request, *args, **kwargs):
@@ -74,19 +68,14 @@ class ProductViewSet(LoginRequiredMixin, viewsets.ModelViewSet):
         elif user.is_authenticated:
             try:
                 vendor = Vendor.objects.get(owner=user)
+                # Check if the user owns the product
                 if instance.owner == vendor:
                     serializer = self.get_serializer(instance)
                     return Response(serializer.data)
+                else:
+                    return Response({'detail': 'You do not have permission to access this delivery.'}, status=403)
             except Vendor.DoesNotExist:
-                vendor_staff = VendorStaff.objects.filter(user=user)
-                if vendor_staff.exists():
-                    vendor_id = vendor_staff.first().owner.id
-                    if instance.owner.id == vendor_id:
-                        serializer = self.get_serializer(instance)
-                        return Response(serializer.data)
-                    else:
-                        return Response({'detail': 'User is not associated with any vendor'}, status=403)
-            return Response({'detail': 'You do not have permission to access this product.'}, status=403)
+                return Response({'detail': 'User is not associated with any vendor'}, status=403)
         else:
             return Response({'detail': 'Authentication credentials were not provided.'}, status=401)
 
@@ -128,7 +117,7 @@ class ProductViewSet(LoginRequiredMixin, viewsets.ModelViewSet):
                 if instance.owner == vendor:
                     return super().update(request, *args, **kwargs)
                 else:
-                    return Response({'detail': 'You do not have permission to update this product.'}, status=403)
+                    return Response({'detail': 'You do not have permission to update this delivery.'}, status=403)
             except Vendor.DoesNotExist:
                 # If user is not a vendor, check if user is a vendor staff
                 vendor_staff = VendorStaff.objects.filter(user=user)
@@ -137,7 +126,7 @@ class ProductViewSet(LoginRequiredMixin, viewsets.ModelViewSet):
                     if instance.owner == vendor_staff.first().owner:
                         return super().update(request, *args, **kwargs)
                     else:
-                        return Response({'detail': 'You do not have permission to update this product.'}, status=403)
+                        return Response({'detail': 'You do not have permission to update this delivery.'}, status=403)
                 else:
                     return Response({'detail': 'User is not associated with any vendor'}, status=403)
         else:
@@ -157,9 +146,9 @@ class ProductViewSet(LoginRequiredMixin, viewsets.ModelViewSet):
                 if instance.owner == vendor:
                     return super().destroy(request, *args, **kwargs)
                 else:
-                    return Response({'detail': 'You do not have permission to delete this product.'}, status=403)
+                    return Response({'detail': 'You do not have permission to delete this delivery.'}, status=403)
             except Vendor.DoesNotExist:
                 # If user is not a vendor, disallow delete
                 return Response({'detail': 'You do not have permission to delete this product.'}, status=403)
         else:
-            return Response({'detail': 'Authentication credentials were not provided.'}, status=401)
+            return Response({'detail': 'Authentication credentials were not provided.'}, status=403)

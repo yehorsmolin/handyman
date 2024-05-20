@@ -5,6 +5,12 @@ from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
 from forms.forms import UserRegistrationForm, UserLoginForm
 
+from rest_framework import status
+from rest_framework.decorators import api_view, permission_classes, authentication_classes
+from rest_framework.response import Response
+
+from Handyman.serializers import ObtainAuthTokenSerializer
+
 
 @csrf_exempt
 def register(request):
@@ -59,3 +65,15 @@ def api_authentication(request):
 
 def home(request):
     return render(request, 'home.html')
+
+
+@api_view(['POST'])
+@permission_classes([])
+@authentication_classes([])
+def obtain_auth_token(request):
+    serializer = ObtainAuthTokenSerializer(data=request.data)
+
+    if serializer.is_valid():
+        return Response(serializer.data)
+    else:
+        return Response(serializer.errors, status=400)

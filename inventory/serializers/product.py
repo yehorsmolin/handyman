@@ -41,21 +41,5 @@ class ProductReadOnlySerializer(serializers.ModelSerializer):
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = ('id', 'title', 'category', 'storage', 'grade', 'price', 'status', 'supplier', 'invoice', 'imei', 'owner')
-
-    def create(self, validated_data):
-        # Extract the Vendor ID based on the user's role
-        user = self.context['request'].user
-        if user.is_superuser or user.is_vendor:
-            # If user is a vendor, use the vendor's ID as the owner
-            vendor_id = user.vendor.id
-        elif user.is_vendor_staff:
-            # If user is a vendor staff, use the associated vendor's ID as the owner
-            vendor_id = user.vendorstaff.owner.id
-        else:
-            # If user does not have appropriate permissions, raise an error
-            raise serializers.ValidationError("You do not have permission to create products.")
-
-        # Set the Vendor as the owner of the product
-        validated_data['owner_id'] = vendor_id
-        return super().create(validated_data)
+        fields = ('id', 'title', 'category', 'storage', 'grade', 'color', 'price',
+                  'status', 'supplier', 'invoice', 'imei', 'owner')

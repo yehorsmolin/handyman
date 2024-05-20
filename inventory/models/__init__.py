@@ -10,6 +10,7 @@ from .vendor_staff import VendorStaff
 from .storage import Storage
 from .invoice import Invoice
 from .driver import Driver
+from .delivery import Delivery
 
 __all__ = [
     'Product',
@@ -24,4 +25,5 @@ __all__ = [
     'Storage',
     'Invoice',
     'Driver',
+    'Delivery'
 ]

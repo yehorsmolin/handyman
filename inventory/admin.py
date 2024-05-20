@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from inventory.models import Product, Category, Color, Grade, Order, Status, Supplier, Vendor, VendorStaff
-from inventory.models import Storage, Invoice, Driver
+from inventory.models import Storage, Invoice, Driver, Delivery
 
 
 admin.site.register(Product)
@@ -16,4 +16,5 @@ admin.site.register(Order)
 admin.site.register(Storage)
 admin.site.register(Invoice)
 admin.site.register(Driver)
+admin.site.register(Delivery)
 

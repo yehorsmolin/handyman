@@ -9,6 +9,7 @@ class Driver(models.Model):
     telegram_chat_id = models.CharField(max_length=120, blank=True, null=True)
     email = models.EmailField(blank=True, null=True)
     description = models.TextField(blank=True, null=True)
+    owner = models.ForeignKey('Vendor', on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
         return self.contact_person

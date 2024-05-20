@@ -10,6 +10,7 @@ from .storage import StorageSerializer
 from .invoice import InvoiceSerializer, InvoiceReadOnlySerializer
 from .product import ProductReadOnlySerializer, ProductSerializer
 from .order import OrderSerializer, OrderReadOnlySerializer
+from .delivery import DeliverySerializer
 
 
 __all__ = [
@@ -28,4 +29,5 @@ __all__ = [
     'StatusSerializer',
     'StorageSerializer',
     'InvoiceSerializer',
+    'DeliverySerializer'
 ]

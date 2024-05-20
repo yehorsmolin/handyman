@@ -1,0 +1,61 @@
+version: "3"
+services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: handyman
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: viA19Toz
+    ports:
+      - "54322:5432"
+  redis:
+    image: "redis:latest"
+  web:
+    build:
+      context: .
+    image: handyman-web
+    ports:
+      - "8000:8000"
+    command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+    environment:
+        - DB_HOST=db
+        - DB_NAME=handyman
+        - DB_USER=postgres
+        - DB_PASSWORD=viA19Toz
+        - CELERY_BROKER_URL=redis://redis:6379/0
+        - CELERY_RESULT_BACKEND=redis://redis:6379/0
+    depends_on:
+        - db
+        - redis
+    volumes:
+      - .:/app
+    restart: always
+  migration:
+    image: handyman-web
+    command: ["python", "manage.py", "migrate"]
+    environment:
+        - DB_HOST=db
+        - DB_NAME=handyman
+        - DB_USER=postgres
+        - DB_PASSWORD=viA19Toz
+    depends_on:
+        - db
+    restart: on-failure
+    volumes:
+      - .:/app
+  celery:
+    image: handyman-web
+    command: ["celery", "-A", "Handyman.celery", "worker", "--loglevel=info"]
+    environment:
+        - DB_HOST=db
+        - DB_NAME=handyman
+        - DB_USER=postgres
+        - DB_PASSWORD=viA19Toz
+        - CELERY_BROKER_URL=redis://redis:6379/0
+        - CELERY_RESULT_BACKEND=redis://redis:6379/0
+    depends_on:
+        - db
+        - redis
+    volumes:
+        - .:/app
+    restart: always

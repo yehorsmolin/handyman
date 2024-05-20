@@ -4,74 +4,64 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c4ae005-f306-4011-aa45-a473f0ac9a9a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Handyman.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Handyman/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Handyman/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Handyman/permissions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Handyman/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Handyman/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Handyman/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forms/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/models/category.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/models/color.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/models/driver.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/models/grade.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/models/invoice.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/models/order.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/models/product.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/models/status.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/models/storage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/models/supplier.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/models/vendor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/models/vendor_staff.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/serializers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/serializers/category.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/serializers/color.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/serializers/driver.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/serializers/grade.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/serializers/invoice.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/serializers/order.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/serializers/product.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/serializers/status.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/serializers/storage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/serializers/supplier.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/serializers/vendor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/serializers/vendor_staff.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/signals.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/viewsets/driver.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/viewsets/invoice.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/viewsets/order.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/viewsets/product.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/viewsets/vendor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/logout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
+    <list default="true" id="7c4ae005-f306-4011-aa45-a473f0ac9a9a" name="Changes" comment="Created project structure, basic models, serializers, basic views and viewsets; implemented basic, token and custom authentification; written permissions (should be edited further), implemented router;">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Handyman/celery.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Handyman/schema.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Handyman/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/google_sheets/api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gunicorn_conf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/models/delivery.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/serializers/delivery.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/tasks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/viewsets/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/viewsets/delivery.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/set_webhook.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/telegram/telegram.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/telegram/telegram_view.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/e2e/e2e.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit_tests/models_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit_tests/serializers_tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Handyman/permissions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Handyman/permissions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Handyman/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Handyman/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Handyman/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Handyman/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/models/driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/models/driver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/models/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/models/order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/serializers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/serializers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/serializers/driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/serializers/driver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/serializers/invoice.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/serializers/invoice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/serializers/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/serializers/order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/serializers/product.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/serializers/product.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/serializers/vendor.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/serializers/vendor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/viewsets/driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/viewsets/driver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/viewsets/invoice.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/viewsets/invoice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/viewsets/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/viewsets/order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/viewsets/product.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/viewsets/product.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/viewsets/vendor.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/viewsets/vendor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
         <option value="Python Script" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -90,6 +80,12 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.Handyman.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.unit_tests.models_tests.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.unit_tests.serializers_tests.executor&quot;: &quot;Run&quot;,
+    &quot;Python.api.executor&quot;: &quot;Run&quot;,
+    &quot;Python.set_webhook.executor&quot;: &quot;Run&quot;,
+    &quot;Python.telegram.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -97,6 +93,7 @@
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR_AND_PREVIEW&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/oldfshnd/PycharmProjects/Handyman/google_sheets&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -110,7 +107,126 @@
     ]
   }
 }</component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\oldfshnd\PycharmProjects\Handyman\google_sheets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\oldfshnd\PycharmProjects\Handyman\Handyman" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Django tests.Test: tests.unit_tests.serializers_tests">
+    <configuration name="Test: tests.unit_tests.models_tests" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="Handyman" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.unit_tests.models_tests" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: tests.unit_tests.serializers_tests" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="Handyman" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.unit_tests.serializers_tests" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Handyman" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/google_sheets" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/google_sheets/api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="set_webhook" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Handyman" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/set_webhook.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="telegram" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Handyman" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/telegram" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/telegram/telegram.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Handyman" type="Python.DjangoServer" factoryName="Django server">
       <module name="Handyman" />
       <option name="ENV_FILES" value="" />
@@ -118,6 +234,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Handyman.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -135,6 +252,15 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Django tests.Test: tests.unit_tests.serializers_tests" />
+        <item itemvalue="Django tests.Test: tests.unit_tests.models_tests" />
+        <item itemvalue="Python.telegram" />
+        <item itemvalue="Python.api" />
+        <item itemvalue="Python.set_webhook" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -152,11 +278,38 @@
       <option name="presentableId" value="Default" />
       <updated>1715684539702</updated>
       <workItem from="1715684566717" duration="20921000" />
-      <workItem from="1715714507898" duration="999000" />
+      <workItem from="1715714507898" duration="13582000" />
+      <workItem from="1715839405054" duration="28043000" />
+      <workItem from="1716023936828" duration="4939000" />
+      <workItem from="1716035860323" duration="12793000" />
+      <workItem from="1716139256441" duration="5638000" />
+      <workItem from="1716145219410" duration="3603000" />
+      <workItem from="1716188167319" duration="12047000" />
+      <workItem from="1716202080274" duration="4338000" />
     </task>
+    <task id="LOCAL-00001" summary="Created project structure, basic models, serializers, basic views and viewsets; implemented basic, token and custom authentification; written permissions (should be edited further), implemented router;">
+      <option name="closed" value="true" />
+      <created>1715715903583</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715715903583</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created project structure, basic models, serializers, basic views and viewsets; implemented basic, token and custom authentification; written permissions (should be edited further), implemented router;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created project structure, basic models, serializers, basic views and viewsets; implemented basic, token and custom authentification; written permissions (should be edited further), implemented router;" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Handyman$set_webhook.coverage" NAME="set_webhook Coverage Results" MODIFIED="1715856007743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Handyman$Test__tests_unit_tests_models_tests.coverage" NAME="Test: tests.unit_tests.models_tests Coverage Results" MODIFIED="1716195289867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Handyman$api.coverage" NAME="api Coverage Results" MODIFIED="1716026909995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/google_sheets" />
+    <SUITE FILE_PATH="coverage/Handyman$telegram.coverage" NAME="telegram Coverage Results" MODIFIED="1716191688064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/telegram" />
+    <SUITE FILE_PATH="coverage/Handyman$Test__tests_unit_tests_serializers_tests.coverage" NAME="Test: tests.unit_tests.serializers_tests Coverage Results" MODIFIED="1716199358519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
